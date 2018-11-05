@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,9 @@ public void onItemSelected(AdapterView<?> adapterView, View view,
         int position, long id) {
 
         String seleted = ((TextView)view).getText().toString();
-        String text = adapterView.getItemAtPosition(position).toString();
+
+    Toast.makeText(getApplicationContext(), seleted+"을(를) 선택했습니다.", 1).show();
+
 
         }
 
